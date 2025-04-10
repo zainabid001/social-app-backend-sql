@@ -4,6 +4,7 @@ const router = express.Router();
 const userRouter = require("./routes/user.route");
 // Configure express for form data
 app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
 const port = process.env.PORT || 5000;
 //  for static file
 app.use(express.static('public'));
